@@ -13,11 +13,12 @@ body {
   
 }
 .game {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 30%;
     margin-right: 30%;
     background-color: rgb(15, 27, 32);
     border-radius: 12%;
+    padding: 20px;
     
 }
 h1 {

@@ -12,11 +12,11 @@ var lettersGuessed = document.getElementById("lets-guessed");
 winsText.textContent = "Wins: " + wins;
 lossText.textContent = "Losses: " + losses;
 choicesLeft.textContent = "Guesses Left: " + guessLeft;
-lettersGuessed.textContent = "Your Guesses so far: ";
+
 
 function resetFunction() {
     guessLeft = 10;
-    lettersGuessed.textContent = "Your Guesses so far: "
+    lettersGuessed.textContent = ""
 }
 
 document.onkeyup = function(event) {
@@ -32,7 +32,7 @@ document.onkeyup = function(event) {
         if (userGuess != computerGuess) {
             guessLeft--;
         }
-        if (guessLeft <= 0) {
+        if (guessLeft === 0) {
             losses++;
             resetFunction();
         }
