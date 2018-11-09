@@ -42,7 +42,4 @@ document.onkeyup = function(event) {
         choicesLeft.textContent = "Guesses Left: " + guessLeft;
         var textnode = document.createTextNode(" " + userGuess + " ");
         lettersGuessed.appendChild(textnode);
-
-
-    console.log(computerGuess);
 }
