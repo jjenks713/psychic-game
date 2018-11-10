@@ -21,7 +21,7 @@ function resetFunction() {
 }
 
 document.onkeyup = function(event) {
-    var userGuess = event.key;
+    var userGuess = event.key.toLowerCase();
 
 
     
@@ -30,7 +30,6 @@ document.onkeyup = function(event) {
             wins++;
             resetFunction();
         }
-        console.log(computerGuess)
         if (userGuess != computerGuess) {
             guessLeft--;
         }
@@ -38,7 +37,7 @@ document.onkeyup = function(event) {
             losses++;
             resetFunction();
         }
-        
+        console.log(computerGuess)
         winsText.textContent = "Wins: " + wins;
         lossText.textContent = "Losses: " + losses;
         choicesLeft.textContent = "Guesses Left: " + guessLeft;
