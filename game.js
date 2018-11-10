@@ -37,7 +37,7 @@ document.onkeyup = function(event) {
             losses++;
             resetFunction();
         }
-        console.log(computerGuess)
+        
         winsText.textContent = "Wins: " + wins;
         lossText.textContent = "Losses: " + losses;
         choicesLeft.textContent = "Guesses Left: " + guessLeft;
