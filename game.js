@@ -12,23 +12,25 @@ var lettersGuessed = document.getElementById("lets-guessed");
 winsText.textContent = "Wins: " + wins;
 lossText.textContent = "Losses: " + losses;
 choicesLeft.textContent = "Guesses Left: " + guessLeft;
-
+var computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
 
 function resetFunction() {
     guessLeft = 10;
     lettersGuessed.textContent = ""
+    computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
 }
 
 document.onkeyup = function(event) {
     var userGuess = event.key;
 
 
-    var computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
+    
 
         if (userGuess === computerGuess) {
             wins++;
             resetFunction();
         }
+        console.log(computerGuess)
         if (userGuess != computerGuess) {
             guessLeft--;
         }
