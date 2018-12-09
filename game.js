@@ -18,6 +18,7 @@ function resetFunction() {
     guessLeft = 10;
     lettersGuessed.textContent = ""
     computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
+    
 }
 
 document.onkeyup = function(event) {
@@ -36,7 +37,8 @@ document.onkeyup = function(event) {
         if (guessLeft === 0) {
             losses++;
             resetFunction();
-        }
+        } 
+
         
         winsText.textContent = "Wins: " + wins;
         lossText.textContent = "Losses: " + losses;
